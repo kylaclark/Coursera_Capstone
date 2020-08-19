@@ -1,0 +1,24 @@
+1. Introduction
+1.1: Background
+Car collisions occur everyday across the world. These incidents affect not only those involved in the collision, but also those traveling through or near the location at which these collisions occur. Fellow commuters, law enforcement, first responders, and even innocent bystanders can be affected by collisions, so what if there was away to warn commuters of a collision before these commuters reach the location where these incidents occur? What if there was a tool that could warn the likelihood of you getting into a collision and the severity of the collision based on where and when you’re traveling, road conditions, weather, and more. A tool like this could allow driver to re-evaluate their travel plans or make drivers use more caution when driving to help prevent collisions from occurring.
+
+1.2: Problem
+Data that might contribute to determining severity of collisions might include the type of collision, location of the collision, road conditions, weather conditions, light conditions, and other metrics that would affect the severity of a collision. This project aims to predict the severity of collisions based on different attributes provided by the dataset.
+
+1.3: Interest
+This project would be of interest to SDOT Traffic Management Division to gain insight on the factors that impact severity of collisions. From this information, the SDOT Traffic Management Division can implement methods to help prevent the number of collisions that occur throughout Seattle. Along with SDOT Traffic Management Division, this tool would be of interest to any commuter in Seattle to make them aware of different conditions that impact the severity of collisions and  instill more caution in Seattle’s commuters when traveling.
+
+
+
+2. Data Acquisition and Cleaning
+2.1: Data Sources
+The data used for this project was provided by SDOT Traffic Management Division and recorded by Traffic Records Group. The data file, Data-Collisions.csv, can be found here. The metadata for this dataset can be found here. The .csv file includes data for all types of collisions in Seattle, Washington from 2004 to present. The original dataset provided 194674 samples and 37 attributes/features.
+
+2.2: Data cleansing
+The data cleansing process began with converting the Data-Collsions.csv to an Excel sheet (Data-Collsions.xlsx). Using the metadata file provided with the dataset, the attributes and each attributes’ associated values were evaluated. Attributes that lacked a majority of data were removed. These attributes included: EXCERTRSNCODE, EXCERTRSNDES, PEDROWNOTGRNT, and CROSSWALKKEY. Along with attributes that lacked data values, there were also attributes in the dataset that did not hold any value towards reaching the end goal of this project. For example the following attributes do relate to the drivers wrongdoing as opposed to environmental factors that commuters have no control over: INATTENTIONIND, SPEEDING, and UNDERINFL. Many attributes provided in the dataset contained unique values associated with the collision incident. For lack of confusion and redundancy the OBJECTID was used to uniquely identify each collision incident and the following attributes were removed:  COLDETKEY, INCKEY, and REPORTNO. Other attributes that were not detrimental to this Machine Learning model included: SDOTCOLNUM, SEGLANEKEY, STATUS, and INTKEY. 
+
+The 21 attributes/features that were kept and used for the Machine Learning model include: SEVERITYCODE, X, Y, OBJECTID, ADDRTYPE, LOCATION, SEVERITYCODE, COLLISIONTYPE, PERSONCOUNT, PEDCOUNT, PEDCYLCOUNT, VEHCOUNT, INCDATE, INCDTTM, JUNCTIONTYPE, SDOT_COLCODE, WEATHER, ROADCOND, LIGHTCOND, ST_COLCODE, and HITPARKEDCAR. (descriptions and metadata for these attributes can be found here.
+
+After removing attributes that were not needed for this specific Machine Learning model, each sample was evaluated to determine if enough information was provided to keep the unique collision incident as a sample. For example, if a unique collision incident lacked information relating to location, severity, or type of collision then the unique collision was removed from the dataset. If a unique collision lacked information for road, weather, and light conditions, then the unique collision was removed from the dataset. 
+
+Before cleansing, the original file contained 194674 samples and 37 attributes/features. The end result of the data cleansing process resulted in ________ samples and 21 attributes/features in the dataset.
