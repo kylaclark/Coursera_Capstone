@@ -1,4 +1,4 @@
-# The following project uses Python to create a Machine Learning (ML) model that predicts the severity of car crashes based on differnt attributes. This project is the Coursera Capstone project for IBM's Data Science certification.
+# The following project uses Python and Jupyter Notebooks to create a Machine Learning (ML) model that predicts the severity of car crashes based on differnt attributes. This project is the Coursera Capstone project for IBM's Data Science certification.
 
 # The data file used for this project is:
 # https://s3.us.cloud-object-storage.appdomain.cloud/cf-courses-data/CognitiveClass/DP0701EN/version-2/Data-Collisions.csv
